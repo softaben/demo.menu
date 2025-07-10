@@ -927,229 +927,6 @@
     const homeNav = document.getElementById('homeNav');
     const menuNav = document.getElementById('menuNav');
 
-    // بيانات القائمة حسب نوع الوجبة
-    const menuData = {
-      breakfast: [
-        {
-          section: "فطور تقليدي",
-          icon: "fa-bread-slice",
-          items: [
-            {
-              plat: "بغرير",
-              prix: 15,
-              description: "بغرير تقليدي مع عسل وزبدة",
-              icon: "fa-pancakes"
-            },
-            {
-              plat: "مسمن",
-              prix: 12,
-              description: "مسمن ساخن مع زبدة وعسل",
-              icon: "fa-bread-slice"
-            },
-            {
-              plat: "حلبة",
-              prix: 10,
-              description: "حلبة مغربية ساخنة",
-              icon: "fa-mug-hot"
-            }
-          ]
-        },
-        {
-          section: "عصائر الفطور",
-          icon: "fa-glass-martini-alt",
-          items: [
-            {
-              plat: "عصير أفوكادو",
-              prix: 18,
-              description: "عصير أفوكادو طازج",
-              icon: "fa-glass-water"
-            },
-            {
-              plat: "عصير برتقال",
-              prix: 15,
-              description: "عصير برتقال طازج",
-              icon: "fa-glass-water"
-            }
-          ]
-        }
-      ],
-      lunch: [
-        {
-          section: "أطباق رئيسية",
-          icon: "fa-utensils",
-          items: [
-            {
-              plat: "طاجين لحم",
-              prix: 60,
-              description: "طاجين باللحم والخضار",
-              icon: "fa-pot-food"
-            },
-            {
-              plat: "كوسكوس",
-              prix: 55,
-              description: "كوسكوس بالخضار واللحم",
-              icon: "fa-wheat-awn"
-            },
-            {
-              plat: "المروزية",
-              prix: 65,
-              description: "لحم بالزبيب واللوز",
-              icon: "fa-drumstick-bite"
-            }
-          ]
-        },
-        {
-          section: "مقبلات",
-          icon: "fa-leaf",
-          items: [
-            {
-              plat: "سلطة زيتون",
-              prix: 25,
-              description: "سلطة طازجة مع زيتون أخضر وأسود",
-              icon: "fa-leaf"
-            },
-            {
-              plat: "بسطيلة",
-              prix: 35,
-              description: "بسطيلة بالدجاج واللوز",
-              icon: "fa-pastafarianism"
-            }
-          ]
-        }
-      ],
-      dinner: [
-        {
-          section: "أطباق عشاء",
-          icon: "fa-moon",
-          items: [
-            {
-              plat: "شواء مشكل",
-              prix: 70,
-              description: "شواء لحم ودجاج مع خضار",
-              icon: "fa-drumstick-bite"
-            },
-            {
-              plat: "باستا بحري",
-              prix: 55,
-              description: "باستا بالمأكولات البحرية",
-              icon: "fa-fish"
-            },
-            {
-              plat: "سلطة سيزر",
-              prix: 35,
-              description: "سلطة سيزر مع دجاج",
-              icon: "fa-leaf"
-            }
-          ]
-        },
-        {
-          section: "شوربات",
-          icon: "fa-bowl-food",
-          items: [
-            {
-              plat: "حريرة",
-              prix: 20,
-              description: "شوربة مغربية تقليدية",
-              icon: "fa-bowl-food"
-            },
-            {
-              plat: "شوربة خضار",
-              prix: 18,
-              description: "شوربة خضار طازجة",
-              icon: "fa-bowl-food"
-            }
-          ]
-        }
-      ],
-      desserts: [
-        {
-          section: "حلويات تقليدية",
-          icon: "fa-ice-cream",
-          items: [
-            {
-              plat: "الشباكية",
-              prix: 25,
-              description: "حلوة مغربية تقليدية",
-              icon: "fa-cookie"
-            },
-            {
-              plat: "كعب غزال",
-              prix: 30,
-              description: "حلوة لوز مغربية",
-              icon: "fa-cookie-bite"
-            },
-            {
-              plat: "معمول",
-              prix: 28,
-              description: "حلوة التمر المغربية",
-              icon: "fa-cookie"
-            }
-          ]
-        },
-        {
-          section: "حلويات غربية",
-          icon: "fa-birthday-cake",
-          items: [
-            {
-              plat: "تشيز كيك",
-              prix: 35,
-              description: "تشيز كيك بالتوت",
-              icon: "fa-cheese"
-            },
-            {
-              plat: "موس شوكولاتة",
-              prix: 30,
-              description: "موس شوكولاتة بلجيكية",
-              icon: "fa-ice-cream"
-            }
-          ]
-        }
-      ],
-      drinks: [
-        {
-          section: "مشروبات ساخنة",
-          icon: "fa-mug-hot",
-          items: [
-            {
-              plat: "شاي بالنعناع",
-              prix: 15,
-              description: "شاي مغربي تقليدي",
-              icon: "fa-mug-hot"
-            },
-            {
-              plat: "قهوة مغربية",
-              prix: 18,
-              description: "قهوة عربية أصيلة",
-              icon: "fa-coffee"
-            }
-          ]
-        },
-        {
-          section: "مشروبات باردة",
-          icon: "fa-glass-water",
-          items: [
-            {
-              plat: "عصير برتقال",
-              prix: 20,
-              description: "عصير برتقال طازج",
-              icon: "fa-glass-water"
-            },
-            {
-              plat: "ماء معدنية",
-              prix: 10,
-              icon: "fa-bottle-water"
-            },
-            {
-              plat: "ليمونادة",
-              prix: 18,
-              description: "ليمونادة منعشة",
-              icon: "fa-glass-water"
-            }
-          ]
-        }
-      ]
-    };
-
     // عناوين الوجبات
     const mealTitles = {
       breakfast: "قائمة الفطور",
@@ -1168,13 +945,36 @@
       document.getElementById('today-date').textContent = `${day}/${month}/${year}`;
     }
 
-    // دالة تحميل القائمة حسب نوع الوجبة
+    // دالة تحميل القائمة من Firebase
     function loadMenu(mealType) {
-      menuContainer.innerHTML = '';
+      menuContainer.innerHTML = '<div class="loading">جاري تحميل القائمة...</div>';
       currentMealType = mealType;
       currentMealTitle.textContent = mealTitles[mealType] || 'قائمتنا الشهية';
       
-      const currentMenuData = menuData[mealType];
+      // قراءة القائمة من Firebase
+      database.ref('menu/' + mealType).once('value')
+        .then((snapshot) => {
+          const currentMenuData = snapshot.val();
+          renderMenu(currentMenuData);
+        })
+        .catch((error) => {
+          console.error('Error loading menu:', error);
+          menuContainer.innerHTML = `
+            <div style="text-align: center; padding: 2rem; color: var(--text); opacity: 0.6;">
+              <i class="fas fa-exclamation-triangle" style="font-size: 1.5rem; margin-bottom: 1rem;"></i>
+              <p>حدث خطأ أثناء تحميل القائمة</p>
+            </div>
+          `;
+        });
+      
+      // إظهار قسم القائمة وإخفاء صفحة اختيار الوجبة
+      mealTypeSection.style.display = 'none';
+      menuSection.style.display = 'block';
+    }
+
+    // دالة لعرض القائمة
+    function renderMenu(currentMenuData) {
+      menuContainer.innerHTML = '';
       
       if (currentMenuData && currentMenuData.length > 0) {
         currentMenuData.forEach((section, sectionIndex) => {
@@ -1197,7 +997,7 @@
           section.items.forEach((item, itemIndex) => {
             const itemDiv = document.createElement('div');
             itemDiv.className = 'menu-item';
-            itemDiv.dataset.id = `${mealType}-${sectionIndex}-${itemIndex}`;
+            itemDiv.dataset.id = `${currentMealType}-${sectionIndex}-${itemIndex}`;
             itemDiv.dataset.plat = item.plat;
             itemDiv.dataset.prix = item.prix;
             itemDiv.innerHTML = `
@@ -1227,10 +1027,6 @@
           </div>
         `;
       }
-      
-      // إظهار قسم القائمة وإخفاء صفحة اختيار الوجبة
-      mealTypeSection.style.display = 'none';
-      menuSection.style.display = 'block';
     }
 
     // دالة للعودة إلى صفحة اختيار الوجبة
@@ -1517,6 +1313,243 @@
         }
       });
     });
+
+    // دالة لرفع القائمة إلى Firebase (للاستخدام في وحدة التحكم)
+    window.uploadMenuToFirebase = function() {
+      const menuData = {
+        breakfast: [
+          {
+            section: "فطور تقليدي",
+            icon: "fa-bread-slice",
+            items: [
+              {
+                plat: "بغرير",
+                prix: 15,
+                description: "بغرير تقليدي مع عسل وزبدة",
+                icon: "fa-pancakes"
+              },
+              {
+                plat: "مسمن",
+                prix: 12,
+                description: "مسمن ساخن مع زبدة وعسل",
+                icon: "fa-bread-slice"
+              },
+              {
+                plat: "حلبة",
+                prix: 10,
+                description: "حلبة مغربية ساخنة",
+                icon: "fa-mug-hot"
+              }
+            ]
+          },
+          {
+            section: "عصائر الفطور",
+            icon: "fa-glass-martini-alt",
+            items: [
+              {
+                plat: "عصير أفوكادو",
+                prix: 18,
+                description: "عصير أفوكادو طازج",
+                icon: "fa-glass-water"
+              },
+              {
+                plat: "عصير برتقال",
+                prix: 15,
+                description: "عصير برتقال طازج",
+                icon: "fa-glass-water"
+              }
+            ]
+          }
+        ],
+        lunch: [
+          {
+            section: "أطباق رئيسية",
+            icon: "fa-utensils",
+            items: [
+              {
+                plat: "طاجين لحم",
+                prix: 60,
+                description: "طاجين باللحم والخضار",
+                icon: "fa-pot-food"
+              },
+              {
+                plat: "كوسكوس",
+                prix: 55,
+                description: "كوسكوس بالخضار واللحم",
+                icon: "fa-wheat-awn"
+              },
+              {
+                plat: "المروزية",
+                prix: 65,
+                description: "لحم بالزبيب واللوز",
+                icon: "fa-drumstick-bite"
+              }
+            ]
+          },
+          {
+            section: "مقبلات",
+            icon: "fa-leaf",
+            items: [
+              {
+                plat: "سلطة زيتون",
+                prix: 25,
+                description: "سلطة طازجة مع زيتون أخضر وأسود",
+                icon: "fa-leaf"
+              },
+              {
+                plat: "بسطيلة",
+                prix: 35,
+                description: "بسطيلة بالدجاج واللوز",
+                icon: "fa-pastafarianism"
+              }
+            ]
+          }
+        ],
+        dinner: [
+          {
+            section: "أطباق عشاء",
+            icon: "fa-moon",
+            items: [
+              {
+                plat: "شواء مشكل",
+                prix: 70,
+                description: "شواء لحم ودجاج مع خضار",
+                icon: "fa-drumstick-bite"
+              },
+              {
+                plat: "باستا بحري",
+                prix: 55,
+                description: "باستا بالمأكولات البحرية",
+                icon: "fa-fish"
+              },
+              {
+                plat: "سلطة سيزر",
+                prix: 35,
+                description: "سلطة سيزر مع دجاج",
+                icon: "fa-leaf"
+              }
+            ]
+          },
+          {
+            section: "شوربات",
+            icon: "fa-bowl-food",
+            items: [
+              {
+                plat: "حريرة",
+                prix: 20,
+                description: "شوربة مغربية تقليدية",
+                icon: "fa-bowl-food"
+              },
+              {
+                plat: "شوربة خضار",
+                prix: 18,
+                description: "شوربة خضار طازجة",
+                icon: "fa-bowl-food"
+              }
+            ]
+          }
+        ],
+        desserts: [
+          {
+            section: "حلويات تقليدية",
+            icon: "fa-ice-cream",
+            items: [
+              {
+                plat: "الشباكية",
+                prix: 25,
+                description: "حلوة مغربية تقليدية",
+                icon: "fa-cookie"
+              },
+              {
+                plat: "كعب غزال",
+                prix: 30,
+                description: "حلوة لوز مغربية",
+                icon: "fa-cookie-bite"
+              },
+              {
+                plat: "معمول",
+                prix: 28,
+                description: "حلوة التمر المغربية",
+                icon: "fa-cookie"
+              }
+            ]
+          },
+          {
+            section: "حلويات غربية",
+            icon: "fa-birthday-cake",
+            items: [
+              {
+                plat: "تشيز كيك",
+                prix: 35,
+                description: "تشيز كيك بالتوت",
+                icon: "fa-cheese"
+              },
+              {
+                plat: "موس شوكولاتة",
+                prix: 30,
+                description: "موس شوكولاتة بلجيكية",
+                icon: "fa-ice-cream"
+              }
+            ]
+          }
+        ],
+        drinks: [
+          {
+            section: "مشروبات ساخنة",
+            icon: "fa-mug-hot",
+            items: [
+              {
+                plat: "شاي بالنعناع",
+                prix: 15,
+                description: "شاي مغربي تقليدي",
+                icon: "fa-mug-hot"
+              },
+              {
+                plat: "قهوة مغربية",
+                prix: 18,
+                description: "قهوة عربية أصيلة",
+                icon: "fa-coffee"
+              }
+            ]
+          },
+          {
+            section: "مشروبات باردة",
+            icon: "fa-glass-water",
+            items: [
+              {
+                plat: "عصير برتقال",
+                prix: 20,
+                description: "عصير برتقال طازج",
+                icon: "fa-glass-water"
+              },
+              {
+                plat: "ماء معدنية",
+                prix: 10,
+                icon: "fa-bottle-water"
+              },
+              {
+                plat: "ليمونادة",
+                prix: 18,
+                description: "ليمونادة منعشة",
+                icon: "fa-glass-water"
+              }
+            ]
+          }
+        ]
+      };
+
+      // رفع البيانات إلى Firebase
+      const menuRef = database.ref('menu');
+      menuRef.set(menuData)
+        .then(() => {
+          console.log('تم رفع القائمة بنجاح!');
+          alert('تم رفع القائمة إلى Firebase بنجاح');
+        })
+        .catch((error) => {
+          console.error('حدث خطأ أثناء رفع القائمة:', error);
+          alert('حدث خطأ أثناء رفع القائمة: ' + error.message);
+        });
+    };
   </script>
 </body>
 </html>
